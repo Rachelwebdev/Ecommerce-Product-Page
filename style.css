@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  --main-family-font: "Kumbh Sans", sans-serif;
+}
+
+#nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  border: none;
+  border-bottom: 1px solid rgba(170, 174, 182, 0.4);
+  margin: 0 auto;
+  height: 100px;
+}
+
+.left-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: hsl(219, 9%, 45%);
+  font-family: var(--main-family-font);
+}
+.logo {
+  margin-right: 30px;
+}
+
+.nav-links ul li {
+  padding: 0 15px;
+}
+
+li {
+  display: inline;
+}
+.avatar {
+  width: 40px;
+  margin-left: 30px;
+}
+
+.cart {
+  padding-bottom: 7px;
+}
+
+/* Main Container Styles */
+.container {
+  border: 1px solid red;
+  width: 80%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+/* Left Container with images */
+.left-container {
+  border: 1px solid blue;
+  margin-right: 50px;
+}
+
+.upper-image {
+  width: 400px;
+  height: 400px;
+  border-radius: 20px;
+  margin-bottom: 30px;
+}
+
+.lower-image {
+  display: flex;
+  justify-content: space-around;
+}
+.lower-image img {
+  width: 80px;
+  height: 80px;
+  border-radius: 12px;
+}
+
+.second-image,
+.third-image {
+  margin-left: 10px;
+}
+.third-image {
+  margin-right: 10px;
+}
+
+/* Right container with content */
+.right-container {
+  border: 1px solid yellow;
+  /* width: 50%; */
+}
