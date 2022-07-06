@@ -2,11 +2,11 @@
 
 const smallImage = document.querySelectorAll(".sm-img");
 const firstLargeImage = document.querySelector(".upper-image");
-const secondLargeImage = document.querySelector(".second-large-image");
-const thirdLargeImage = document.querySelector(".third-large-image");
-const fourthLargeImage = document.querySelector(".fourth-large-image");
 const lowerDivImage = document.querySelector(".lower-image");
 const upperDivImage = document.querySelector(".upper-image-cont");
+const numberOfOrders = document.querySelector(".product-num");
+const cart = document.querySelector(".cart");
+const emptyCartBox = document.querySelector(".empty_cart");
 
 for (let i = 0; i < smallImage.length; i++) {
   smallImage[i].addEventListener("click", changeImage);
@@ -31,4 +31,12 @@ smallImage.forEach((img) => {
     lowerDivImage.querySelector(".active").classList.remove("active");
     img.classList.add("active");
   });
+});
+
+cart.addEventListener("click", () => {
+  const number = parseInt(numberOfOrders.innerHTML.replace("0", 0));
+  console.log(cart);
+  if (number === 0) {
+    emptyCartBox.classList.toggle("display_cart");
+  }
 });

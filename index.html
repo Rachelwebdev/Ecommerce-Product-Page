@@ -25,12 +25,9 @@
       </div>
       <div class="right-nav">
         <ul>
-          <li>
+          <li class="cart">
             <a href="#"
-              ><img
-                class="cart"
-                src="./images/icon-cart.svg"
-                alt="image of a cart"
+              ><img src="./images/icon-cart.svg" alt="image of a cart"
             /></a>
           </li>
           <li>
@@ -41,6 +38,14 @@
         </ul>
       </div>
     </nav>
+    <div class="empty_cart">
+      <div class="cart-title">
+        <p>Cart</p>
+      </div>
+      <div class="empty-cart-text">
+        <p>Your cart is empty.</p>
+      </div>
+    </div>
     <div class="container">
       <div class="left-container">
         <div class="upper-image-cont">
@@ -99,7 +104,7 @@
               src="./images/icon-minus.svg"
               alt="decrement sign"
             />
-            <p class="zero">0</p>
+            <p class="product-num" data-value="0">0</p>
             <img
               class="plus"
               src="./images/icon-plus.svg"
