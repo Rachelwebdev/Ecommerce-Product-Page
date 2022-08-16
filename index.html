@@ -25,12 +25,9 @@
       </div>
       <div class="right-nav">
         <ul>
-          <li>
+          <li class="cart">
             <a href="#"
-              ><img
-                class="cart"
-                src="./images/icon-cart.svg"
-                alt="image of a cart"
+              ><img src="./images/icon-cart.svg" alt="image of a cart"
             /></a>
           </li>
           <li>
@@ -41,34 +38,44 @@
         </ul>
       </div>
     </nav>
+    <div class="empty_cart">
+      <div class="cart-title">
+        <p>Cart</p>
+      </div>
+      <div class="empty-cart-text">
+        <p>Your cart is empty.</p>
+      </div>
+    </div>
     <div class="container">
       <div class="left-container">
-        <img
-          class="upper-image"
-          src="./images/image-product-1.jpg"
-          alt="product image"
-        />
+        <div class="upper-image-cont">
+          <img
+            class="upper-image"
+            src="./images/image-product-1.jpg"
+            alt="first product image"
+          />
+        </div>
 
         <div class="lower-image">
-          <div class="first-image">
+          <div class="first-image sm-img active" data-value="1">
             <img
               src="./images/image-product-1-thumbnail.jpg"
               alt="Thumbnail-1"
             />
           </div>
-          <div class="second-image">
+          <div class="second-image sm-img" data-value="2">
             <img
               src="./images/image-product-2-thumbnail.jpg"
               alt="Thumbnail-2"
             />
           </div>
-          <div class="third-image">
+          <div class="third-image sm-img" data-value="3">
             <img
               src="./images/image-product-3-thumbnail.jpg"
               alt="Thumbnail-3"
             />
           </div>
-          <div class="fourth-image">
+          <div class="fourth-image sm-img" data-value="4">
             <img
               src="./images/image-product-4-thumbnail.jpg"
               alt="Thumbnail-4"
@@ -76,7 +83,44 @@
           </div>
         </div>
       </div>
-      <div class="right-container"></div>
+      <div class="right-container">
+        <p class="company-name">SNEAKER COMPANY</p>
+        <h1 class="sneakers-edition">
+          Fall Limited Edition <br />
+          Sneakers
+        </h1>
+        <p class="produt-description">
+          These low-profile sneakers are our perfect casual wear <br />
+          companion. Featuring a durable rubber outer sole, they'll <br />
+          withstand everything the weather can offer.
+        </p>
+        <h2 class="price">&#36;125.00 <span class="discount">50%</span></h2>
+
+        <p class="initial-price">&#36;250.00</p>
+        <div class="bar">
+          <div class="left-bar">
+            <img
+              class="minus"
+              src="./images/icon-minus.svg"
+              alt="decrement sign"
+            />
+            <p class="product-num" data-value="0">0</p>
+            <img
+              class="plus"
+              src="./images/icon-plus.svg"
+              alt="increment sign"
+            />
+          </div>
+          <div class="right-bar">
+            <img
+              class="cart-icon"
+              src="./images/icon-cart.svg"
+              alt="cart icon"
+            />
+            <p class="cart-text">Add to cart</p>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="script.js"></script>
   </body>

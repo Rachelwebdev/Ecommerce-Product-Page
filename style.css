@@ -1,20 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
 
+:root {
+  --orange: hsl(26, 100%, 55%);
+  --very-dark-blue: hsl(220, 13%, 13%);
+  --grayish-blue: hsl(219, 9%, 45%);
+  font-family: "Kumbh Sans", sans-serif;
+  --pale-orange: hsl(25, 100%, 94%);
+  --light-grayish-blue: hsl(223, 64%, 98%);
+  --dark-grayish-blue: hsl(219, 9%, 45%);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  --main-family-font: "Kumbh Sans", sans-serif;
-}
-
 #nav-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 80%;
+  width: 70%;
   border: none;
   border-bottom: 1px solid rgba(170, 174, 182, 0.4);
   margin: 0 auto;
@@ -29,7 +35,7 @@ body {
 
 nav ul li a {
   text-decoration: none;
-  color: hsl(219, 9%, 45%);
+  color: var(--grayish-blue);
   font-family: var(--main-family-font);
 }
 .logo {
@@ -51,38 +57,91 @@ li {
 .cart {
   padding-bottom: 7px;
 }
+.empty_cart {
+  /* border: 1px solid orange; */
+  border-radius: 5px;
+  width: 320px;
+  height: 200px;
+  position: absolute;
+  right: 13%;
+  top: 12%;
+  background-color: #fff;
+  z-index: 1;
+  box-shadow: 5px 2px 20px rgb(172, 169, 169);
+  display: none;
+}
+
+.display_cart {
+  display: block;
+}
+
+.cart-title {
+  padding: 15px 0 15px 10px;
+  font-size: 13px;
+  font-weight: bolder;
+  border-bottom: 1px solid rgba(170, 174, 182, 0.4);
+}
+
+.empty-cart-text {
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  color: var(--grayish-blue);
+  font-weight: bold;
+}
 
 /* Main Container Styles */
 .container {
-  border: 1px solid red;
   width: 80%;
   height: 80vh;
   display: flex;
-  justify-content: center;
+  margin-left: 200px;
   margin-top: 50px;
 }
+
 /* Left Container with images */
+
 .left-container {
-  border: 1px solid blue;
-  margin-right: 50px;
+  margin-right: 100px;
+  margin-left: 100px;
 }
 
-.upper-image {
+.upper-image-cont {
   width: 400px;
   height: 400px;
   border-radius: 20px;
   margin-bottom: 30px;
 }
 
+.upper-image-cont img {
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+}
+
 .lower-image {
   display: flex;
   justify-content: space-around;
 }
-.lower-image img {
+
+.lower-image .sm-img img {
+  width: 80px;
+  border-radius: 12px;
+}
+/* .sm-img {
   width: 80px;
   height: 80px;
   border-radius: 12px;
+  object-fit: contain;
 }
+
+.lower-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+} */
 
 .second-image,
 .third-image {
@@ -94,6 +153,105 @@ li {
 
 /* Right container with content */
 .right-container {
-  border: 1px solid yellow;
-  /* width: 50%; */
+  width: 50%;
+  margin-top: 50px;
+  margin-left: 50px;
+}
+
+.company-name {
+  color: var(--orange);
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.sneakers-edition {
+  margin-bottom: 35px;
+  color: var(--very-dark-blue);
+}
+
+.produt-description {
+  margin-bottom: 20px;
+  font-size: 15px;
+  line-height: 22px;
+  color: var(--grayish-blue);
+}
+
+.price {
+  color: var(--very-dark-blue);
+  margin-bottom: 7px;
+}
+
+.discount {
+  color: var(--orange);
+  background-color: var(--pale-orange);
+  border-radius: 5px;
+  padding: 2px 10px;
+  font-size: 15px;
+  margin: auto 0;
+}
+
+.initial-price {
+  text-decoration: line-through;
+  margin-bottom: 40px;
+  color: rgb(202, 198, 201);
+  font-weight: 700;
+}
+
+/* Cart buttons */
+.bar {
+  width: 65%;
+  height: 45px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-bar {
+  background-color: var(--light-grayish-blue);
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+}
+.minus,
+.plus,
+.product-num {
+  margin: auto 0;
+}
+
+.minus {
+  width: 12px;
+  height: 3px;
+}
+.plus {
+  width: 12px;
+  height: 10px;
+}
+
+.right-bar {
+  width: 65%;
+  border-radius: 10px;
+  background-color: var(--orange);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart-icon {
+  width: 18px;
+  height: 18px;
+  margin-right: 15px;
+}
+
+.cart-text {
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.active {
+  opacity: 0.5;
+  border-radius: 10px;
+  border: 3px solid var(--orange);
 }
